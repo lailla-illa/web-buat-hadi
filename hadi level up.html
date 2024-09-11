@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, My Love</title>
+    <style>
+      body {
+        font-family: "Georgia", serif;
+        background-color: #e6f2ff;
+        color: #004080;
+        text-align: center;
+        padding: 50px;
+        margin: 0;
+        background-image: url("https://example.com/background-image.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+      }
+      .container {
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        max-width: 50%;
+        margin: 50px auto;
+        position: relative;
+      }
+      .hidden {
+        display: none;
+      }
+      h1 {
+        font-size: 3em;
+        color: #0073e6;
+        margin: 20px 0;
+      }
+      p {
+        font-size: 1.2em;
+        text-align: justify;
+        margin: 20px 0;
+      }
+      .hearts img {
+        width: 300px;
+        height: auto;
+        border: 5px solid #0073e6;
+        border-radius: 20px;
+      }
+      .cake-container {
+        position: relative;
+        margin: 30px auto;
+        width: 300px;
+        height: 300px;
+      }
+      .cake {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("https://example.com/cake-image.png") no-repeat center center;
+        background-size: contain;
+        animation: moveCake 10s infinite linear;
+      }
+      .cake-text {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        transform: translateX(-70%);
+        font-size: 2em;
+        color: #ff6347;
+        font-weight: bold;
+        animation: textBounce 2s infinite;
+        text-align: center;
+      }
+      .line-after-hadi,
+      .line-after-title {
+        border: 0;
+        border-top: 2px solid #0073e6;
+        margin: 20px auto;
+        width: 80%;
+      }
+      footer {
+        margin-top: 40px;
+        font-size: 0.8em;
+        color: #0073e6;
+      }
+      .to-hadi {
+        font-size: 1.2em;
+        color: #0073e6;
+      }
+      @keyframes moveCake {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(20px);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      @keyframes textBounce {
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+        40% {
+          transform: translateY(-20px);
+        }
+        60% {
+          transform: translateY(-10px);
+        }
+      }
+    </style>
+    <script>
+      function showBirthdayMessage() {
+        document.getElementById("form-section").classList.add("hidden");
+        document.getElementById("birthday-message").classList.remove("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Form Input -->
+    <div class="container" id="form-section">
+      <h2>allo sayang, diisi duluu yaa</h2>
+      <form onsubmit="event.preventDefault(); showBirthdayMessage();">
+        <label for="name">Nama:</label><br />
+        <input type="text" id="name" required /><br /><br />
+        <label for="birthdate">Tanggal Lahir:</label><br />
+        <input type="date" id="birthdate" required /><br /><br />
+        <input type="submit" value="klik disini yaaa" />
+      </form>
+    </div>
+
+    <!-- Pesan Ulang Tahun -->
+    <div class="container hidden" id="birthday-message">
+      <div class="to-hadi">Untuk Hadi Gunawan.</div>
+      <hr class="line-after-hadi" />
+      <h1>Happy Birthday, My Love!</h1>
+      <hr class="line-after-title" />
+      <div class="cake-container">
+        <div class="cake-text">21 tahun</div>
+      </div>
+
+      <!-- Tulisan dan Musik Latar -->
+      <p style="color: #ff6347; font-size: 1.1em; text-align: center">klik dulu musiknya sebelum dibaca :b</p>
+      <audio id="background-music" controls autoplay loop muted>
+        <source src="sertamuliacut.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <!-- Script untuk Mengaktifkan Audio -->
+      <script>
+        // Menghilangkan atribut mute setelah halaman dimuat agar audio dapat diputar dengan suara
+        window.onload = function () {
+          const audio = document.getElementById("background-music");
+          audio.muted = false; // Menghilangkan mute setelah halaman dimuat
+          audio.play(); // Memastikan audio diputar
+        };
+      </script>
+
+      <p>Hari ini, aku langitkan doa-doaku sayangg.</p>
+      <p>
+        Selamat ulang tahun sayangkuu cintakuu duniakuu! Terima kasih yaa sudah hidup dan melewati 21 tahun terakhir ini dengan sangat baik. Semoga hidup selalu membawa mas ke dunia yang tidak pernah mas sangka akan merasakannya. Semoga
+        semesta selalu menuntun dan melindungi mas, serta menjadi penguat ketika mas merasa bumi dan isinya melukaimu. Semoga hati mas selalu diberi kekuatan, ketenangan, dan kebahagiaan yang tidak ada habisnya. Semoga hal-hal baik selalu
+        menjadi sahabat dalam keseharianmu.
+      </p>
+      <p>
+        Semoga senyum bapak ibuk yang sedang mas usahakan itu suatu hari menghampirimu. Semoga mas bisa lebih kuat di atas segala hal yang mampu membuat mas rapuh. maka hebatlah kamu di atas keraguan orang lain. Maka semoga Allah dan
+        semesta melapangkan hatimu atas segala hal yang sebelumnya terasa berat dan mengecewakan. Sehat selalu, my almost lover🥺💗.
+      </p>
+      <div class="hearts">
+        <img src="potohadi.jpeg" alt="Heart" />
+      </div>
+
+      <!-- Penambahan Footer -->
+      <footer>
+        <p>Dari pacarmu yg paling cantik, Lailla😋</p>
+      </footer>
+    </div>
+  </body>
+</html>
